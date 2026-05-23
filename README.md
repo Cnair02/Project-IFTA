@@ -1,4 +1,4 @@
-# IFTA project Pipeline (AWS Services)
+# IFTA Project Pipeline (AWS Services)
 
 An Objective of this project to demo how the different files available can be processed to a format usable for further analysis in IFTA audits utilizing the AWS services.
 
