@@ -1,5 +1,3 @@
-<img width="863" height="416" alt="Screenshot 2026-05-23 at 3 25 19 PM" src="https://github.com/user-attachments/assets/ce9bf274-7534-47b2-b8fa-e08d6fa893af" /># Project-IFTA
-
 # IFTA project Pipeline (AWS Services)
 
 An Objective of this project to demo how the different files available can be processed to a format usable for further analysis in IFTA audits utilizing the AWS services.
