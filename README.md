@@ -50,7 +50,7 @@ A high level overview of the process:
 
 
 
-  ### 2. ETL Layer ###
+   ### 2. ETL Layer ###
   
   - Processing : Once we have the data from fuel invoices and tables extracted from the PDF files into a CSV structured format, we can proceed further with the main next transformation job. Here we can work on the excel distance log files and the CSVs.
 
