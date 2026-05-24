@@ -114,7 +114,14 @@ A high level overview of the process:
 - Lambda  
 - Glue  
 - Textract
-- Redshift  
+- Redshift
+
+---
+
+## 4. Reconciliation
+
+Since the distance logs contain date, origin and destination, mapping the date and city of the logs with the fuel invoice city and date would help to correctly identity the corresponding fuel related data points. 
 
 
 ---
+
