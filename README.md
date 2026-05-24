@@ -11,11 +11,20 @@ An Objective of this project to demo how the different files available can be pr
 - Distance logs - Tables scanned as PDF file and Excel files
 - Fuel invoice - Receipts of the fuel charges being made.
 
-Assumptions: The test code used has been rendered using Pandas as it is lightweight and quick for testing files. In a production environment these will be processed using Spark with its distributed data platform. 
+Assumptions: The test code used has been rendered using Pandas as it is lightweight and quick for small files. In a production environment these will be processed using Spark with its distributed data platform abilities. 
 
 ---
 
 ## 2. Architecture
+
+A high level overview of the process:
+- Have an IAM role that can utilize the AWS services the end-to-end with minimal accesses needed.
+- AWS S3 will be used as the storage layer for this project. When creating the buckets encryption (SSE-KMS) be enforced.
+
+  <img width="1010" height="126" alt="Screenshot 2026-05-23 at 7 16 16 PM" src="https://github.com/user-attachments/assets/22fc3475-3019-4c63-a595-ebe43375e27f" />
+
+  
+- Each layer from raw storage to pre-process to transform layer will have a separate zone in S3 to maintain proper distinction and access
 
 - **Stage 1**
   - Pre-processing input layer : This step focusses on working on unstructrued data in the form of invoices and tables provided to us in a PDF format the first step would be to extract these into a structured format suitable for further processing.
@@ -27,10 +36,7 @@ Assumptions: The test code used has been rendered using Pandas as it is lightwei
       - distance_log_excel_files/
   - The below diagram shows the overview of the process.
  
-
-<img width="1034" height="259" alt="Screenshot 2026-05-23 at 3 47 14 PM" src="https://github.com/user-attachments/assets/eef6fac3-eba8-42c0-9d8b-1c502c12deda" />
-
-
+<img width="1010" height="192" alt="Screenshot 2026-05-23 at 7 16 57 PM" src="https://github.com/user-attachments/assets/4b7800e5-cb17-475e-bcd8-d01c1773682b" />
 
 
 
@@ -46,7 +52,7 @@ Assumptions: The test code used has been rendered using Pandas as it is lightwei
   - Once these are done, external tables are created on Redshift that will access the data from the Data Catalog thereby ensuring that when new files arrive, the warehouse will automatically reflect the most updated data.
   - The below diagram shows the overview of the main processing layer
  
-<img width="968" height="450" alt="Screenshot 2026-05-23 at 3 47 24 PM" src="https://github.com/user-attachments/assets/df52c2be-1311-43de-8cde-d324087b9cbc" />
+<img width="896" height="417" alt="Screenshot 2026-05-23 at 7 17 32 PM" src="https://github.com/user-attachments/assets/e7ee8f76-b595-43e0-9550-a5281d1c6381" />
 
 
 
@@ -64,18 +70,14 @@ Assumptions: The test code used has been rendered using Pandas as it is lightwei
   - The below diagram shows the overview of the dimensional model
  
 
-
-
-
-
-
-
+<img width="960" height="584" alt="Screenshot 2026-05-23 at 7 18 00 PM" src="https://github.com/user-attachments/assets/dedfe645-afb3-42a1-9a6d-af632f3c15f1" />
 
 
   - After these dimension and fact tables are created, materialized views can be made for aggregate tables that can be refreshed to get the most updated result. For example
     - aggregation by year: trip_distance_facts table can be aggregated over the distance column to find the total distance covered at each year level, quarter and month level by joining it with the date dimension and grouping by the desired date level.
     - aggregation by jurisdiction: trip_distance_facts table can be aggregated over the distance column to find the total distance covered at each jusisdiction level by joining with the jurisdiction_dim and grouping.
 
+---
 
 ## 3. Tech stack
 
