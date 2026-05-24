@@ -76,7 +76,7 @@ A high level overview of the process:
 
 
   
-  ### 3. Dimensional Modelling###
+  ### 3. Dimensional Modelling ###
   
   - Dimensional Modelling: Once the data is available to read from AWS Redshift it can then be used to create dimension and fact tables. The following dimensional model has been designed for this use case.
     
