@@ -35,13 +35,13 @@ A high level overview of the process:
   - This can be done using the AWS Textract Service that is also extended as an API. "analyze_expense" as well as "analyze_document" are some of the APIs available that helps to extract invoice/receipt specific details and table format data respectively. Post extraction these can be rendered as a CSV file for further analysis. AWS lambda function will help to trigger the AWS Glue script that will pre-process these files with the textract APIs.
     
   - Input raw files are placed S3 zone: cn01-project-input
-      - distance_log_excel_files/file_name.xlsx
       - distance_log_files_pdf/file_name.pdf
       - fuel_invoice_files/file_name.pdf
         
   - Target location in S3 zone: cn01-project-pre-processed-files
       - /input_files/distancelog_files/file_name.csv
       - /input/invoice_files/file_name.csv
+      - /input/distance_log_excel_files/file_name.xlsx
   - The below diagram shows the overview of the process.
 
  
