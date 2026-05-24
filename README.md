@@ -28,7 +28,7 @@ A high level overview of the process:
   
 - Each layer from raw storage to pre-process to transform layer will have a separate zone in S3 to maintain proper distinction and access
 
-### 1. Pre-processing ###
+- ### 1. Pre-processing ###
 
   - Pre-processing input layer : This step focusses on working on unstructrued data in the form of invoices and tables provided to us in a PDF format the first step would be to extract these into a structured format suitable for further processing.
   
@@ -50,7 +50,7 @@ A high level overview of the process:
 
 
 
-### 2. ETL Layer ###
+- ### 2. ETL Layer ###
   
   - Processing : Once we have the data from fuel invoices and tables extracted from the PDF files into a CSV structured format, we can proceed further with the main next transformation job. Here we can work on the excel distance log files and the CSVs.
 
@@ -76,7 +76,7 @@ A high level overview of the process:
 
 
   
-  ### 3. Dimensional Modelling###
+  - ### 3. Dimensional Modelling###
   
   - Dimensional Modelling: Once the data is available to read from AWS Redshift it can then be used to create dimension and fact tables. The following dimensional model has been designed for this use case.
     
