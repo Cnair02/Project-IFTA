@@ -48,9 +48,7 @@ A high level overview of the process:
 <img width="1010" height="192" alt="Screenshot 2026-05-23 at 7 16 57 PM" src="https://github.com/user-attachments/assets/4b7800e5-cb17-475e-bcd8-d01c1773682b" />
 
 
-
-
-   ### 2. ETL Layer ###
+  ### 2. ETL Layer ###
   
   - Processing : Once we have the data from fuel invoices and tables extracted from the PDF files into a CSV structured format, we can proceed further with the main next transformation job. Here we can work on the excel distance log files and the CSVs.
 
@@ -75,7 +73,6 @@ A high level overview of the process:
 
 
 
-  
   ### 3. Dimensional Modelling ###
   
   - Dimensional Modelling: Once the data is available to read from AWS Redshift it can then be used to create dimension and fact tables. The following dimensional model has been designed for this use case.
