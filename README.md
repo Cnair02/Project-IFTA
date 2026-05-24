@@ -15,6 +15,8 @@ Assumptions: The test code used has been rendered using Pandas as it is lightwei
 
 ---
 
+
+
 ## 2. Architecture
 
 A high level overview of the process:
@@ -42,8 +44,10 @@ A high level overview of the process:
 
 
 
+
 - **Stage 2**
   - Processing : Once we have the data from fuel invoices and tables extracted from the PDF files into a CSV structured format, we can proceed further with the main next transformation job. Here we can work on the excel distance log files and the CSVs.
+
   - AWS Glue is a suitable ETL platform that provides many options to process and transform data into target. Once such use case is using the interactive notebooks within AWS glue that helps to programmatically perform transformation. This can then be run as a script that will be triggered with the help of AWS Lambda function. Lambda function will check for the files in the configured locations and start the glue script to perform the transformations.
   - Input pre-processed files are placed S3 zone: cn01-project-pre-processed-files/input_files/
   - Target location in S3 zone: cn01-project-output-205096516800-us-east-2-an
