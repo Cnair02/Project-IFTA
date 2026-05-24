@@ -1,0 +1,28 @@
+'Page number,'Key,'Value,'Normalized,'Confidence score % (Key),'Confidence score % (Value)
+"'1",',"'UFA Hanna""685 - 1st Avenue West
+Hanna, AB
+TBJ 1P#","'ADDRESS","'","'99.81789398"
+"'1",',"'685 - 1st Avenue West","'STREET","'","'99.61083221"
+"'1",',"'Hanna,","'CITY","'","'99.99491119"
+"'1",',"'AB","'STATE","'","'83.03483582"
+"'1",',"'TBJ 1P#","'ZIP_CODE","'","'99.98782349"
+"'1",',"'UFA Hanna","'NAME","'","'99.92266846"
+"'1",',"'685 - 1st Avenue West""Hanna, AB
+TBJ 1P#","'ADDRESS_BLOCK","'","'95.24935150"
+"'1",',"'UFA","'NAME","'","'99.73532867"
+"'1","'DATE :","'2022/08/10","'INVOICE_RECEIPT_DATE","'99.62461853","'99.92987823"
+"'1","'TRANS # :","'50746215NSYX","'INVOICE_RECEIPT_ID","'69.30170441","'69.49542999"
+"'1",',"'UFA Hanna""685 - 1st Avenue West
+Hanna, AB
+TBJ 1P#","'VENDOR_ADDRESS","'","'99.81789398"
+"'1",',"'UFA Hanna","'VENDOR_NAME","'","'99.92266846"
+"'1",',"'UFA","'VENDOR_NAME","'","'99.73532867"
+"'1",',"'(403) 854-4378","'VENDOR_PHONE","'","'98.75241089"
+"'1",',"'UFA.com/Ratells","'VENDOR_URL","'","'80.97115326"
+"'1","'SITE ID :","'462","'OTHER","'99.60959625","'99.92189026"
+"'1","'TIME :","'07:46:18","'OTHER","'99.72488403","'99.92148590"
+"'1","'PRODUCT :","'DIESEL","'OTHER","'99.19286346","'99.94026184"
+"'1","'PUMP # :","'15","'OTHER","'99.62694550","'99.71543121"
+"'1","'LITRES :","'266.20","'OTHER","'99.66017151","'99.92086029"
+"'1","'IMPORTANT:","'Retain this copy for""your records","'OTHER","'90.39624786","'90.42986298"
+"'1","'Classification:","'Protected A","'OTHER","'99.79273987","'85.75068665"
