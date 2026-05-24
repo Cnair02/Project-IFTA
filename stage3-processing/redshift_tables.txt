@@ -1,3 +1,0 @@
-##This file contains screenshots of the data modelling layer in redshift##
-
-1. 
