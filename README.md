@@ -30,10 +30,12 @@ A high level overview of the process:
   - Pre-processing input layer : This step focusses on working on unstructrued data in the form of invoices and tables provided to us in a PDF format the first step would be to extract these into a structured format suitable for further processing.
   - This can be done using the AWS Textract Service that is also extended as an API. "analyze_expense" as well as "analyze_document" are some of the APIs available that helps to extract invoice/receipt specific details and table format data respectively. Post extraction these can be rendered as a CSV file for further analysis. AWS lambda function will help to trigger the AWS Glue script that will pre-process these files with the textract APIs.
   - Input raw files are placed S3 zone: cn01-project-input
+      - distance_log_excel_files/file_name.xlsx
+      - distance_log_files_pdf/file_name.pdf
+      - fuel_invoice_files/file_name.pdf
   - Target location in S3 zone: cn01-project-pre-processed-files
-      - distance_log_files_pdf/
-      - fuel_invoice_files/
-      - distance_log_excel_files/
+      - /input_files/distancelog_files/file_name.csv
+      - /input/invoice_files/file_name.csv
   - The below diagram shows the overview of the process.
  
 <img width="1010" height="192" alt="Screenshot 2026-05-23 at 7 16 57 PM" src="https://github.com/user-attachments/assets/4b7800e5-cb17-475e-bcd8-d01c1773682b" />
@@ -45,8 +47,8 @@ A high level overview of the process:
   - AWS Glue is a suitable ETL platform that provides many options to process and transform data into target. Once such use case is using the interactive notebooks within AWS glue that helps to programmatically perform transformation. This can then be run as a script that will be triggered with the help of AWS Lambda function. Lambda function will check for the files in the configured locations and start the glue script to perform the transformations.
   - Input pre-processed files are placed S3 zone: cn01-project-pre-processed-files/input_files/
   - Target location in S3 zone: cn01-project-output-205096516800-us-east-2-an
-      - output_parquet_files/distance_logs/
-      - output_parquet_files/fuel_invoice/
+      - output_parquet_files/distance_logs/year=2016/month=3/file_name.parquet
+      - output_parquet_files/fuel_invoice/year=2016/month=3/file_name.parquet
   - The output files are partitioned by year and date and saved as parquet files for effective data storage and access.
   - The tables are registered with the Glue Data Catalog that will also help to keep the metadata as well as track the lineage.
   - Once these are done, external tables are created on Redshift that will access the data from the Data Catalog thereby ensuring that when new files arrive, the warehouse will automatically reflect the most updated data.
