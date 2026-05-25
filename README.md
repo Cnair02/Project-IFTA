@@ -123,7 +123,7 @@ A high level overview of the process:
 
 ## 4. Reconciliation
 
-Since the distance logs contain date, origin and destination, mapping the date and city of the logs with the fuel invoice city and date would help to correctly identify the corresponding fuel related data points. 
+Since the distance logs contain date, origin and destination, mapping the date and city of the logs with the fuel invoice city and date would help to correctly identify the corresponding fuel related data points. By looking at the fuel invoice if the date and city where fuel was filled matches with that of the distance journey between the origin and destination the records can be reconciled.
 
 
 ---
