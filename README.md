@@ -6,9 +6,10 @@ Objective of this project is to demo how the IFTA different files available can 
 
 ## 1. Project overview
 
- There are mainly 2 types of files to be processed,
+ There are mainly 3 types of files to be processed,
 
-- Distance logs - Tables scanned as PDF file and Excel files
+- Distance logs - Tables scanned as PDF files
+- Distance logs - Excel files
 - Fuel invoice - Receipts of the fuel charges being made.
 
 Assumptions: The test code used has been rendered using Pandas as it is lightweight and quick for small files. In a production environment these will be processed using Spark with its distributed data platform abilities. 
