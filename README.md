@@ -1,6 +1,6 @@
 # IFTA Project Pipeline (AWS Services)
 
-An Objective of this project to demo how the IFTA different files formats available can be processed to a format usable for further analysis in audits utilizing the AWS services.
+Objective of this project is to demo how the IFTA different files available can be processed to a format usable for further analysis in audits utilizing the AWS services.
 
 ---
 
@@ -28,7 +28,7 @@ A high level overview of the process:
   
 - Each layer from raw storage to pre-process to transform layer will have a separate zone in S3 to maintain proper distinction and access
 
-  ### 1. Pre-processing ###
+  ### 1. Pre-processing (Stage 1) ###
 
   - Pre-processing input layer : This step focusses on working on unstructrued data in the form of invoices and tables provided to us in a PDF format the first step would be to extract these into a structured format suitable for further processing.
   
@@ -48,7 +48,7 @@ A high level overview of the process:
 <img width="1010" height="192" alt="Screenshot 2026-05-23 at 7 16 57 PM" src="https://github.com/user-attachments/assets/4b7800e5-cb17-475e-bcd8-d01c1773682b" />
 
 
-  ### 2. ETL Layer ###
+  ### 2. ETL Layer (Stage 2) ###
   
   - Processing : Once we have the data from fuel invoices and tables extracted from the PDF files into a CSV structured format, we can proceed further with the main next transformation job. Here we can work on the excel distance log files and the CSVs.
 
@@ -73,7 +73,7 @@ A high level overview of the process:
 
 
 
-  ### 3. Dimensional Modelling ###
+  ### 3. Dimensional Modelling (Stage 3) ###
   
   - Dimensional Modelling: Once the data is available to read from AWS Redshift it can then be used to create dimension and fact tables. The following dimensional model has been designed for this use case.
     
