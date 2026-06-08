@@ -65,7 +65,7 @@ A high level overview of the process:
     
   - Input pre-processed files are placed in S3 zone: cn01-project-pre-processed-files/input_files/
     
-  - Target location in S3 zone: cn01-project-output-205096516800-us-east-2-an
+  - Target location in S3 zone: cn01-project-output-205096516800-us-east-2-an (Silver layer : transformed files)
       - output_parquet_files/distance_logs/year=2016/month=3/file_name.parquet
       - output_parquet_files/fuel_invoice/year=2016/month=3/file_name.parquet
         
