@@ -78,7 +78,7 @@ A high level overview of the process:
   
 
 
-  ### 3. Dimensional Modelling (Stage 3) ###
+  ### 3. Dimensional Modelling (Stage 3: Gold Layer ) ###
   
   - Dimensional Modelling: Once the data is available to read from AWS Redshift it can then be used to create dimensions and fact tables. The following dimensional model has been designed for this use case.
     
