@@ -45,7 +45,7 @@ A high level overview of the process:
       - distance_log_files_pdf/file_name.pdf
       - fuel_invoice_files/file_name.pdf
         
-  - Target location in S3 zone: cn01-project-pre-processed-files
+  - Target location in S3 zone: cn01-project-pre-processed-files (Bronze layer : Raw files)
       - /input_files/distancelog_files/file_name.csv
       - /input/invoice_files/file_name.csv
       - /input/distance_log_excel_files/file_name.xlsx
