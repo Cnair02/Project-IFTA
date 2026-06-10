@@ -74,6 +74,10 @@ A high level overview of the process:
   - The tables are registered with the Glue Data Catalog that will also help to keep the metadata as well as track the lineage.
     
   - Once these are done, external tables are created on AWS Redshift (warehouse) that will access the data from the Data Catalog thereby ensuring that when new files arrive, the warehouse will automatically reflect the most updated data.
+
+  - Modified Architecture
+    <img width="957" height="612" alt="Screenshot 2026-06-10 at 11 22 08 AM" src="https://github.com/user-attachments/assets/3d94ebe6-7544-4da5-8c97-241af4faf8c4" />
+
     
   
 
@@ -100,6 +104,9 @@ A high level overview of the process:
  
 
 <img width="960" height="584" alt="Screenshot 2026-05-23 at 7 18 00 PM" src="https://github.com/user-attachments/assets/dedfe645-afb3-42a1-9a6d-af632f3c15f1" />
+
+<img width="957" height="606" alt="Screenshot 2026-06-10 at 11 21 51 AM" src="https://github.com/user-attachments/assets/ce48beed-7cf3-47f6-b9c5-a0084cdea1dd" />
+
 
 
   - After these dimension and fact tables are created, materialized views can be made for aggregate tables that can be refreshed to get the most updated result. For example
