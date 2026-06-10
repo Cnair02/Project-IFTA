@@ -103,7 +103,6 @@ A high level overview of the process:
   - The below diagram shows the overview of the dimensional model
  
 
-<img width="960" height="584" alt="Screenshot 2026-05-23 at 7 18 00 PM" src="https://github.com/user-attachments/assets/dedfe645-afb3-42a1-9a6d-af632f3c15f1" />
 
 <img width="957" height="606" alt="Screenshot 2026-06-10 at 11 21 51 AM" src="https://github.com/user-attachments/assets/ce48beed-7cf3-47f6-b9c5-a0084cdea1dd" />
 
